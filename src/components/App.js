@@ -1,6 +1,7 @@
 import React from 'react';
+import TodoApp from './todo/TodoApp';
 
 function App() {
-  return <div>Hey</div>;
+  return <TodoApp />;
 }
 export default App;
