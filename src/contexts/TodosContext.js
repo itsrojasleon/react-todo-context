@@ -8,8 +8,12 @@ const defaultTodos = [
 
 export const TodosContext = createContext();
 
-function TodosProvider(props) {
-  const { todos, addTodo, removeTodo, toggleTodo, editTodo } = useTodoState(
-    defaultTodos,
+export function TodosProvider(props) {
+  // { todos, addTodo, removeTodo, toggleTodo, editTodo }
+  const todoStuff = useTodoState(defaultTodos);
+  return (
+    <TodosContext.Provider value={todoStuff}>
+      {props.children}
+    </TodosContext.Provider>
   );
 }
