@@ -10,7 +10,6 @@ function useLocalStorageState(key, defaultVal) {
     } catch (e) {
       value = defaultVal;
     }
-    console.log('USING', value);
     return value;
   });
   useEffect(() => {
