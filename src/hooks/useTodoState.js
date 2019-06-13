@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useLocalStorageState } from './useLocalStorageState';
 import uuid from 'uuid/v4';
 
