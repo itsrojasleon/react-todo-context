@@ -14,7 +14,9 @@ export function TodosProvider(props) {
   // const todoStuff = useTodoState(defaultTodos);
   return (
     <TodosContext.Provider value={todos}>
-      <DispatchContext value={dispatch}>{props.children}</DispatchContext>
+      <DispatchContext.Provider value={dispatch}>
+        {props.children}
+      </DispatchContext.Provider>
     </TodosContext.Provider>
   );
 }
